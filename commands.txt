@@ -1,0 +1,17 @@
+python pacman.py  # play a pacman game
+python pacman.py -h # help for all 
+python pacman.py -l tinyMaze -p SearchAgent # DFS search - small maze
+python pacman.py -l mediumMaze -p SearchAgent # DFS search - medium maze
+python pacman.py -l bigMaze -z .5 -p SearchAgent # DFS search - big maze
+python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs # BFS search - medium maze
+python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z .5 #  BFS search - big maze 
+python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs # UCS search - medium maze
+python pacman.py -l mediumDottedMaze -p StayEastSearchAgent # UCS search - different costs
+python pacman.py -l mediumScaryMaze -p StayWestSearchAgent # UCS search - different costs
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic # A* big maze
+
+python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem # BFS reach all corners - tiny maze
+python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem # BFS reach all corners - medium maze
+python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5 # A* reach all corners - medium maze
+python pacman.py -l trickySearch -p AStarFoodSearchAgent # A* eat all dots
+
